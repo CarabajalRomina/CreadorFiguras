@@ -1,0 +1,17 @@
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\bin\Debug\net6.0-windows\CreadorFiguras.exe
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\bin\Debug\net6.0-windows\CreadorFiguras.deps.json
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\bin\Debug\net6.0-windows\CreadorFiguras.runtimeconfig.json
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\bin\Debug\net6.0-windows\CreadorFiguras.dll
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\bin\Debug\net6.0-windows\CreadorFiguras.pdb
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.dll
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\refint\CreadorFiguras.dll
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.pdb
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.genruntimeconfig.cache
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\ref\CreadorFiguras.dll
+C:\Users\LENOVO\Desktop\CreadorFiguras\CreadorFiguras\obj\Debug\net6.0-windows\CreadorFiguras.view.Inicio.resources
