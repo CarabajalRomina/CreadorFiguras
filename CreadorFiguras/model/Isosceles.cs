@@ -26,12 +26,12 @@ namespace CreadorFiguras.model
 
         public override double GetHeigth()
         {
-            return Math.Sqrt(Math.Pow(sideA, 2) - (Math.Pow(bse, 2) / 4));
+            return Math.Sqrt(Math.Pow(sideA, 2) - (Math.Pow(bse/2, 2)));
         }
 
         public override double GetPerimetro()
         {
-            return bse + 2 * sideA;
+            return bse + sideA*2;
         }
 
         public override double GetSurface()

@@ -24,9 +24,34 @@ namespace CreadorFiguras.controller
             return Figuras;
         }
 
-       public string GetFigura(IFiguras figura)
+        public IFiguras crearCirculo(double radio)
         {
-           return figura.GetFigura();
+            return new Circle(radio);
+        }
+
+        public IFiguras crearCuadrado(double lado)
+        {
+            return new Square(lado);
+        }
+
+        public IFiguras crearTrianguloEscaleno(double bse,double ladoA, double ladoB)
+        {
+            return new Scalene(ladoA, ladoB, bse);
+        }
+
+        public IFiguras crearTrianguloEquilatero(double lado)
+        {
+            return new Equilateral(lado);
+        }
+
+        public IFiguras crearTrianguloIsosceles(double lado, double bse)
+        {
+            return new Isosceles(bse,lado);
+        }
+
+        public string GetFigura(IFiguras figura)
+        {
+            return figura.GetFigura();
         }
     }
 }

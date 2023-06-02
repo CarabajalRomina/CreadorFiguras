@@ -23,9 +23,9 @@ namespace CreadorFiguras.model
             this.sideB = sideB;
             this.bse = bse;
             this.perimetro = GetPerimetro();
+            this.semiPerimetro = calculateSemiPerimetro();
             this.surface = GetSurface();
             this.heigth = GetHeigth();
-            this.semiPerimetro = calculateSemiPerimetro();
 
         }
 
@@ -41,7 +41,8 @@ namespace CreadorFiguras.model
 
         public override double GetSurface()
         {
-            return bse * heigth / 2;
+            Console.WriteLine($"{semiPerimetro} * ({semiPerimetro} - {bse}) * ({semiPerimetro} - {sideA}) * ({semiPerimetro} - {sideB})");
+            return Math.Sqrt(semiPerimetro * (semiPerimetro - bse) * (semiPerimetro - sideA) * (semiPerimetro - sideB));
         }
 
         public override string GetFigura()
@@ -51,7 +52,10 @@ namespace CreadorFiguras.model
 
         private double calculateSemiPerimetro()
         {
-            return (bse + sideA + sideB) / 2;
+            Console.WriteLine(perimetro);
+            Console.WriteLine(perimetro/2);
+
+            return perimetro /2;
         }
     }
 }

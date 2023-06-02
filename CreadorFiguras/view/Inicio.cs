@@ -21,7 +21,7 @@ namespace CreadorFiguras.view
             { "Cuadrado", "Circulo", "Triangulo" };
         List<string> tipoTriangulos = new List<string>
             { "Isosceles", "Escaleno", "Equilatero" };
-        IController figureController = FigureController.GetController();
+        IController figureControl = FigureController.GetController();
         IFiguras fig;
 
 
@@ -145,88 +145,46 @@ namespace CreadorFiguras.view
         private void btnCrear_Click(object sender, EventArgs e)
         {
             {
-
                 switch (cmbFigura.SelectedItem)
                 {
                     case "Cuadrado":
-                        if (!String.IsNullOrEmpty(txtBase.Text) && Convert.ToDouble(txtBase.Text) > 0)
-                        {
-                            fig = new Square(Convert.ToDouble(txtBase.Text));
-                            AgregarYMostrarFigura();
-
-                        }
-                        else MessageBox.Show("Ingrese un valor en el campo vacio mayor a 0");
-
-
+                        fig = ((FigureController)figureControl).crearCuadrado(Convert.ToDouble(txtBase.Text));
+                        AgregarYMostrarFigura();
                         break;
 
                     case "Circulo":
-                        if (!String.IsNullOrEmpty(txtRadio.Text) && Convert.ToDouble(txtRadio.Text) > 0)
-                        {
-                            fig = new Circle(Convert.ToDouble(txtRadio.Text));
-                            AgregarYMostrarFigura();
-                        }
-                        else MessageBox.Show("Ingrese un valor en el campo vacio mayor a 0");
-
-
-
+                        fig = ((FigureController)figureControl).crearCirculo(Convert.ToDouble(txtRadio.Text));
+                        AgregarYMostrarFigura();
                         break;
 
                     case "Triangulo":
-
                         switch (cmbTipoTriangulo.SelectedItem)
                         {
                             case "Isosceles":
-                                if (!String.IsNullOrEmpty(txtLadoA.Text) && !String.IsNullOrEmpty(txtBase.Text)
-                                    && Convert.ToDouble(txtBase.Text) > 0 && Convert.ToDouble(txtLadoA.Text) > 0
-                                    && Convert.ToDouble(txtLadoA.Text) != Convert.ToDouble(txtBase.Text)
-                                    )
-                                {
-                                    fig = new Isosceles(Convert.ToDouble(txtBase.Text), Convert.ToDouble(txtLadoA.Text));
-                                    AgregarYMostrarFigura();
-                                }
-                                else MessageBox.Show("Ingrese valores en los campos vacios, asegurese que los valores sean distintos y mayores a 0");
-
+                                fig = ((FigureController)figureControl).crearTrianguloIsosceles(Convert.ToDouble(txtLadoA.Text), Convert.ToDouble(txtBase.Text));
+                                AgregarYMostrarFigura();
                                 break;
 
                             case "Equilatero":
-                                if (!String.IsNullOrEmpty(txtBase.Text) && Convert.ToDouble(txtBase.Text) > 0)
-                                {
-                                    fig = new Equilateral(Convert.ToDouble(txtBase.Text));
-                                    AgregarYMostrarFigura();
-                                }
-                                else MessageBox.Show("Ingrese un valor en el campo vacio mayor a 0");
-
-
+                                fig = ((FigureController)figureControl).crearTrianguloEquilatero(Convert.ToDouble(txtBase.Text));
+                                AgregarYMostrarFigura();
                                 break;
 
                             case "Escaleno":
-                                if (!String.IsNullOrEmpty(txtLadoA.Text) && !String.IsNullOrEmpty(txtBase.Text) && !String.IsNullOrEmpty(txtLadoB.Text)
-                                    && Convert.ToDouble(txtLadoA.Text) > 0 && Convert.ToDouble(txtLadoB.Text) > 0 && Convert.ToDouble(txtBase.Text) > 0
-                                    && Convert.ToDouble(txtLadoA.Text) != Convert.ToDouble(txtBase.Text)
-                                    && Convert.ToDouble(txtBase.Text) != Convert.ToDouble(txtLadoB.Text)
-                                    && Convert.ToDouble(txtLadoA.Text) != Convert.ToDouble(txtLadoB.Text)
-                                    )
-                                {
-                                    fig = new Scalene(Convert.ToDouble(txtLadoA.Text), Convert.ToDouble(txtLadoB.Text), Convert.ToDouble(txtBase.Text));
-                                    AgregarYMostrarFigura();
-                                }
-                                else MessageBox.Show("Ingrese valores en los campos vacios, asegurese que los valores sean distintos y mayores a 0");
-
+                                fig = ((FigureController)figureControl).crearTrianguloEscaleno(Convert.ToDouble(txtBase.Text), Convert.ToDouble(txtLadoA.Text), Convert.ToDouble(txtLadoB.Text));
+                                AgregarYMostrarFigura();
                                 break;
                         }
                         break;
                 };
             }
-
-
         }
 
 
         private void AgregarYMostrarFigura()
         {
-            ((FigureController)figureController).AddFigure(fig);
-            lblDatosFigura.Text = ((FigureController)figureController).GetFigura(fig);
+            ((FigureController)figureControl).AddFigure(fig);
+            lblDatosFigura.Text = ((FigureController)figureControl).GetFigura(fig);
         }
 
         private void btnHistorialFigura_Click(object sender, EventArgs e)
@@ -234,7 +192,6 @@ namespace CreadorFiguras.view
             HistorialFigurasView histoview = new HistorialFigurasView();
             histoview.Show();
             this.Hide();
-            
         }
     }
 }
